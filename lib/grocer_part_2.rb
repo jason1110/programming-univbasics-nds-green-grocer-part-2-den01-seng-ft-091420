@@ -36,9 +36,9 @@ clearanced_items = []
     clearanced_items[:price] * 0.8.round(2)
   end
   clearanced_items << clearance_items
-binding.pry    
 end
 clearanced_items
+binding.pry  
 end
 
 def checkout(cart, coupons)
