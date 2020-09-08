@@ -29,8 +29,11 @@ cart
 end  
 
 def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
+  
+  if item[:clearance]
+    item[:price] * .8.round(2)
+  end
+    
   # REMEMBER: This method **should** update cart
 end
 
