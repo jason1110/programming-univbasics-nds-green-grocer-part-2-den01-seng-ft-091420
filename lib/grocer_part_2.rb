@@ -7,7 +7,9 @@ binding.pry
   applied_coupons = []
   
   coupons.each do |coupon|
-  
+    item = find_item_by_name_in_collection(coupon[:item], cart)
+    item_with_coupon = "#{coupon[:item]} W/COUPON"  
+      if item
   end
   
   cart.each do |item|
