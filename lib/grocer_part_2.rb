@@ -1,6 +1,9 @@
 require_relative './part_1_solution.rb'
 
 def apply_coupons(cart, coupons)
+  applied_coupons_array = []
+  
+  
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
