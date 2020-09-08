@@ -1,8 +1,16 @@
 require_relative './part_1_solution.rb'
+require 'pry'
+
 
 def apply_coupons(cart, coupons)
   applied_coupons_array = []
+  counter = 0
   
+  cart.each do |item|
+  if item == coupons
+binding.pry
+    applied_coupons_array << coupons
+  end  
   
   # Consult README for inputs and outputs
   #
