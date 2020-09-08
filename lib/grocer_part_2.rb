@@ -7,9 +7,10 @@ def apply_coupons(cart, coupons)
   counter = 0
   
   cart.each do |item|
-  if item == coupons
+    if item == coupons
 binding.pry
-    applied_coupons_array << coupons
+      applied_coupons_array << coupons
+    end
   end  
   
   # Consult README for inputs and outputs
