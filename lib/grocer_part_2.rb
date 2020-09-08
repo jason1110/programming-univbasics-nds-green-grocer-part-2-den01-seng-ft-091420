@@ -9,6 +9,7 @@ binding.pry
   
   cart.each do |item|
     if item == coupons
+      item[:item] = +"W/COUPON"
       applied_coupons << coupons
     end
   end  
