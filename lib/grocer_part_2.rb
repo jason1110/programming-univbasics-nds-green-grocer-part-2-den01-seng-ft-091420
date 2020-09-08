@@ -18,7 +18,7 @@ binding.pry
           item_has_coupon ={
             :item => item_with_coupon,
             :price => coupon[:cost] / coupon[:num],
-            :count = coupon[:num],
+            :count => coupon[:num],
             :clearance => item[:clearance]
           }
         cart << item_has_coupon
