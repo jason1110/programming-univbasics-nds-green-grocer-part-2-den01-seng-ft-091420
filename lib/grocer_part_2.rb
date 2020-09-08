@@ -33,6 +33,7 @@ clearanced_items = []
  cart.each do |clearance_items|
   if clearance_items[:clearance] == true
     clearance_items[:price] * 0.8.round(2)
+binding.pry
   end
   clearanced_items << clearance_items
 end
