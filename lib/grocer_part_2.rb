@@ -3,7 +3,6 @@ require 'pry'
 
 
 def apply_coupons(cart, coupons)
-binding.pry
   applied_coupons = []
   
   coupons.each do |coupon|
