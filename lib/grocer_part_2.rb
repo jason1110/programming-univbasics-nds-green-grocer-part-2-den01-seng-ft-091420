@@ -47,8 +47,7 @@ clearanced_cart =  apply_clearance(cart_with_coupons)
 
 total = 0
 clearanced_cart.each do |get_total|
-get_total = clearanced_cart[:price] * clearanced_cart[:count]
-total += get_total
+total += get_total[:price] * get_total[:count]
 end
   
   if total > 100.00
