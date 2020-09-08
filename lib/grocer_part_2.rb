@@ -8,8 +8,21 @@ binding.pry
   
   coupons.each do |coupon|
     item = find_item_by_name_in_collection(coupon[:item], cart)
-    item_with_coupon = "#{coupon[:item]} W/COUPON"  
-      if item
+    item_with_coupon = "#{coupon[:item]} W/COUPON"
+    item_has_coupon? = find_item_by_name_in_collection(item_with_coupon, cart)
+      if item && item[:count] >= coupon[:num]
+        if item_has_coupon?
+          item_has_coupon?[:count] += coupon[:num]
+          item[:count] -= coupon[:num]
+        else
+          item_has_coupon? ={
+            :item => item_with_coupon,
+            :price => coupon[:cost] / coupon[:num],
+            :count = coupon[:num]
+        end  
+      else
+      
+      end  
   end
   
   cart.each do |item|
