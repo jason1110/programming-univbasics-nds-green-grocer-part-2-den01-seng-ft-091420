@@ -10,6 +10,7 @@ def apply_coupons(cart, coupons)
     if item == coupons
       applied_coupons_array << coupons
     end
+applied_coupons_array
 binding.pry 
   end  
   
