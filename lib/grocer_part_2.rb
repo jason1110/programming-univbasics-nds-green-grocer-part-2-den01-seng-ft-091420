@@ -45,12 +45,13 @@ cart_with_coupons = apply_coupons(consolidated_cart, coupons)
 clearanced_cart =  apply_clearance(cart_with_coupons)
 
 total = 0
-clearanced_cart.each |get_total|
-get_total = 
-total (clearanced_cart[:price] * clearanced_cart[:count])
+clearanced_cart.each do |get_total|
+get_total = clearanced_cart[:price] * clearanced_cart[:count]
+total += get_total
+end
   
-#  if total > 100.00
-#    total = total * 0.9.round(2)
-#  end
-#total  
+  if total > 100.00
+    total = total * 0.9.round(2)
+  end
+total  
 end
