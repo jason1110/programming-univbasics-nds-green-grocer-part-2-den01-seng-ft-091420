@@ -3,14 +3,14 @@ require 'pry'
 
 
 def apply_coupons(cart, coupons)
-  applied_coupons_array = []
+  applied_coupons = []
   counter = 0
   
   cart.each do |item|
     if item == coupons
-      applied_coupons_array << coupons
+      applied_coupons << coupons
     end
-applied_coupons_array
+applied_coupons
 binding.pry 
   end  
   
