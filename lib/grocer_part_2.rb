@@ -5,7 +5,10 @@ require 'pry'
 def apply_coupons(cart, coupons)
 binding.pry
   applied_coupons = []
-  counter = 0
+  
+  coupons.each do |coupon|
+  
+  end
   
   cart.each do |item|
     if item == coupons
