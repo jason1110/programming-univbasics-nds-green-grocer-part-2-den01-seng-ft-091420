@@ -38,7 +38,6 @@ clearanced_items = []
   clearanced_items << clearance_items
 end
 clearanced_items
-binding.pry  
 end
 
 def checkout(cart, coupons)
