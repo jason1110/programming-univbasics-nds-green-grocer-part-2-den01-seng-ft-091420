@@ -32,7 +32,7 @@ def apply_clearance(cart)
 clearanced_items = []  
  cart.each do |clearance_items|
   if clearance_items[:clearance]
-    clearance_items[:price] = clearance_items[:price] * 0.8.round(2)
+    clearance_items[:price] = (clearance_items[:price] * 0.80).round(2)
   end
   clearanced_items << clearance_items
 end
@@ -51,7 +51,7 @@ total += get_total[:price] * get_total[:count]
 end
   
   if total > 100.00
-    total = total * 0.9.round(2)
+    total = (total * 0.9).round(2)
   end
 total  
 end
