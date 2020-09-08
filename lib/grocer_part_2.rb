@@ -20,11 +20,13 @@ binding.pry
             :price => coupon[:cost] / coupon[:num],
             :count = coupon[:num],
             :clearance => item[:clearance]
-        end  
-      else
-      
+          }
+        cart << item_has_coupon?
+        item[:count] -= coupon[:num]
+        end
       end  
   end
+cart  
 end  
 
 def apply_clearance(cart)
