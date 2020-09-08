@@ -18,22 +18,14 @@ binding.pry
           item_has_coupon? ={
             :item => item_with_coupon,
             :price => coupon[:cost] / coupon[:num],
-            :count = coupon[:num]
+            :count = coupon[:num],
+            :clearance => item[:clearance]
         end  
       else
       
       end  
   end
-  
-  cart.each do |item|
-    if item == coupons
-      item[:item] = +"W/COUPON"
-      applied_coupons << coupons
-    end
-  end  
-applied_coupons
-binding.pry 
-end
+end  
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
