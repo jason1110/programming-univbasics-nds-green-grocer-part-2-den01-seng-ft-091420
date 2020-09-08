@@ -40,11 +40,11 @@ clearanced_items
 end
 
 def checkout(cart, coupons)
-  consolidate_cart(cart)
-  apply_coupons(cart, coupons)
-  apply_clearance(cart)
+ consolidated_cart = consolidate_cart(cart)
+  apply_coupons(consolidated_cart, coupons)
+  apply_clearance(consolidated_cart)
 
-  total = cart[:price] * cart[:count]
+  total = consolidated_cart[:price] * consolidated_cart[:count]
   
   if total > 100.00
     total = total * 0.9.round(2)
