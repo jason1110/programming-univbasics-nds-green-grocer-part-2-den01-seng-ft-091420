@@ -54,4 +54,5 @@ end
     total = (total * 0.9).round(2)
   end
 total  
+binding.pry
 end
