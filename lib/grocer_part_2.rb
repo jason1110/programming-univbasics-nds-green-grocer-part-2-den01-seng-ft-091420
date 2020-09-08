@@ -30,10 +30,12 @@ end
 
 def apply_clearance(cart)
   
-  if item[:clearance]
-    item[:price] * .8.round(2)
+ cart.each do |clearance_items|
+   
+  if clearance_item[:clearance]
+    clearance_item[:price] * .8.round(2)
   end
-    
+binding.pry    
   # REMEMBER: This method **should** update cart
 end
 
